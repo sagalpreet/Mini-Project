@@ -50,7 +50,6 @@ for i in original:
             comp(a+'.txt',j[:-1])
     g.close()
 f.close()
-#print(friend)
 all=[]
 #sort
 for i in friend:
