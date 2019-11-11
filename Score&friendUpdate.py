@@ -38,6 +38,9 @@ for i in base:
     comp(a,i)
 
 marklist=list(friend.values())
-for i in range(len(friend)):
-    print(friend[marklist.index(max(marklist))])
+keylist=list(friend.keys())
+for i in range(marklist):
+    print(keylist[marklist.index(max(marklist))])
+    keylist.remove(marklist.index(max(marklist)))
     marklist.remove(max(marklist))
+f.close()
