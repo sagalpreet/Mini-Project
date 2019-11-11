@@ -1,7 +1,7 @@
 def bestmutual(org,l):   # l is list of original friends, org is person for whom we are finding
     d={}
     c=0
-    ll=set(l)
+    ll=set(l) #set of friends of org
     for i range(len(l)):
         f=open(l[i])
         s=f.readlines()
@@ -11,15 +11,17 @@ def bestmutual(org,l):   # l is list of original friends, org is person for whom
                 continue
             else:
                 ff=open(x)
-                fr=set(ff.readlines().split()[4:])
-                c=fr.intersection(ll)
-                d.update({x:c})
+                fr=set(ff.readlines().split()[4:])  #creating a set of friends of x
+                c=fr.intersection(ll) #intersection of both sets 
+                d.update({x:len(c)})
 
                 
 
     v=list(d.values()) # taking values from dictionary
+    keylist=list(d.keys())
     for i in range(10): # top 10
-        print(d[v.index(max(v))])
+        print(keylist[v.index(max(v))])
+        keylist.pop([v.index(max(v))])
         v.remove(max(v))
 
     #            for k in range(len(l)):  # checking how many friends have x in common
