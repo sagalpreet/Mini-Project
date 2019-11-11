@@ -17,7 +17,7 @@ def bestmutual(org,l):   # l is list of original friends, org is person for whom
                 ff.close()
 
                 
-def printresults
+def printresults():
     v=list(d.values()) # taking values from dictionary
     keylist=list(d.keys())
     for i in range(10): # top 10
