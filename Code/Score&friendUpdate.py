@@ -55,6 +55,7 @@ all=[]
 for i in friend:
     all.append(i)
 all=arrange(all,friend)
+print('\tPeople you may know')
 for i in range(-1,-11,-1):
     try:
         print('You have',friend[(all[i])][1],'mutual friends with',all[i])   
